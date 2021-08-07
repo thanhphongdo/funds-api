@@ -1,0 +1,55 @@
+{
+  "name": "parse-server-example",
+  "version": "1.4.0",
+  "description": "An example Parse API server using the parse-server module",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ParsePlatform/parse-server-example"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chai": "^4.2.9",
+    "@types/lodash": "^4.14.168",
+    "@types/mocha": "^8.2.0",
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.9",
+    "istanbul": "^0.4.5",
+    "mocha": "^8.3.0",
+    "nodemon": "^2.0.7",
+    "ts-node": "^9.1.1",
+    "tsc-watch": "^4.2.9",
+    "typescript": "^4.2.2"
+  },
+  "dependencies": {
+    "@babel/core": "^7.8.6",
+    "@types/express": "^4.17.2",
+    "@types/parse": "^2.10.17",
+    "@types/request-promise": "^4.1.45",
+    "class-validator": "^0.13.1",
+    "express": "^4.17.1",
+    "kerberos": "~1.1.x",
+    "lodash": "^4.17.21",
+    "parse": "~3.1.0",
+    "parse-dashboard": "^2.0.5",
+    "parse-server": "*",
+    "reflect-metadata": "^0.1.13",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5",
+    "sharp": "^0.27.1",
+    "typedoc": "^0.20.25",
+    "validator": "^13.5.2",
+    "watson-developer-cloud": "^4.0.1"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "debug": "tsc --watch & ENV=debug nodemon --inspect ./build/index.js",
+    "build": "tsc",
+    "docs": "typedoc --out ./build/docs/ ./src/",
+    "docs-es7": "typedoc --target ES7 --out ./build/docs/ ./src/"
+  },
+  "engines": {
+    "node": ">=4.3"
+  }
+}
